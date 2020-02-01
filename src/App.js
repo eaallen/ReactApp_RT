@@ -9,6 +9,7 @@ import Top from './comps/Top';
 import Account from './comps/Account';
 import Login from './comps/Login';
 import SignUp from './comps/SignUp';
+import ProductDetail from './comps/ProductDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 import './index.scss'
@@ -42,7 +43,10 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
                 <Switch>
-                <Route path="/SignUp">
+                <Route path="/ProductDetail">
+                    <ProductDetail />
+                  </Route>
+                  <Route path="/SignUp">
                     <SignUp />
                   </Route>
                   <Route path="/Account">

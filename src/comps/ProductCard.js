@@ -13,17 +13,15 @@ import {
 function ProductCard(props) {
   
     return (
-        <div
-            className={props.className}
-        >
+        <div>
             <Card>
                 <Card.Img variant="top" src={logo} />
                 <Card.Body>
-                    <Card.Title>Lorem ipsum</Card.Title>
+                    <Card.Title>{props.id}</Card.Title>
                     <Card.Text>
-                        Aliquam non ipsum enim. Vivamus.
+                        Aliquam non ipsum enim. ${props.price}.
                     </Card.Text>
-                    <Link href="product/id" className="btn btn-primary" variant="primary" style={{position: "absolute", top: '0px', right: '0'}}>Details</Link>
+                    <Link to="/ProductDetail" className="btn btn-primary" variant="primary" style={{position: "absolute", top: '0px', right: '0'}}>Details</Link>
                 </Card.Body>
             </Card>
 
