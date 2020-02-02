@@ -6,21 +6,24 @@ import PRODUCTS from '../product_images/src/products'
 
 function Center(props) {
     
-    // const elements = ['one', 'two', 'three'];
-
-    // const items = []
-
-    // for (const [index, value] of elements.entries()) {
-    //     items.push(<li key={index}>{value}</li>)
-    // }    
+   const array =  Object.values(PRODUCTS);
+   //these arries will hold the products in the columns
+   let a_super=[]
+   let rows = []
+   let cols = []
+   for (let icount = 0; icount < array.length;icount = icount+4){
+        let a_baby = array.slice(icount,icount+4)
+        a_super.push(a_baby)
+    }
+    console.log(a_super)
+    for (let item of a_super){
+       rows.push(<Row>{item.map((col, index)=>{return <Col key={index}>
+                    <ProductCard id={col.id} filename={col.filename} name={col.name} catagory={col.category}
+                    price={col.price}/></Col>})}</Row>) 
+    }
     
-    // const Names = ['eli','jack','jill','kandin'];
-
-    // const cards = [];
-    // for (const [index, value] of PRODUCTS.entries()){
-    //     cards.push(<ProductCard id={index} info={value} />)
-    // }
-
+    
+    console.log(array)
     return (
         <div
             className={props.className}
@@ -35,23 +38,10 @@ function Center(props) {
                 </i>          
 
             </Jumbotron> */}
+           
             <Container>
-            <Row>
-                <Col>
-                   
-                    {Object.values(PRODUCTS).map( item => {return <ProductCard id={item.id} price={item.price} name={item.name}/> })}
-                    
-                </Col>
-                <Col>
-                    <ProductCard/>
-                </Col>
-                <Col>
-                    <ProductCard/>
-                </Col>
-                <Col>
-                    <ProductCard/>
-                </Col>
-            </Row> 
+                
+                {rows}
             </Container>   
             </div>
   );
