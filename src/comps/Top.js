@@ -46,11 +46,11 @@ function Top(props) {
                                             ></i>}
                                     
                                 >
-                                <Dropdown.Item eventKey="1" className='text-primary'>Elijah Allen</Dropdown.Item>
-                                <Dropdown.Item eventKey="2" href="/Help">Assay Stats</Dropdown.Item>
-                                <Dropdown.Item eventKey="3" href="/Account">Account</Dropdown.Item>
+                                <Dropdown.Item key="1" className='text-primary'>Elijah Allen</Dropdown.Item>
+                                <Dropdown.Item key="2" href="/Help">Assay Stats</Dropdown.Item>
+                                <Dropdown.Item key="3" href="/Account">Account</Dropdown.Item>
                                 <Dropdown.Divider />
-                                <Dropdown.Item eventKey="4" className='text-danger' href='/Login' onClick={log_out}>Sign Out</Dropdown.Item>
+                                <Dropdown.Item key="4" className='text-danger' href='/Login' onClick={log_out}>Sign Out</Dropdown.Item>
                                 </DropdownButton>{''}
                             </>
                             ))}

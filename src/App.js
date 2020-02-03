@@ -29,13 +29,13 @@ function App() {
         <Row>
           <Col xl={12}>
             {/* <Navbar> */}
-              <Top className="bg-dark"></Top>
+              <Top className="bg-primary"></Top>
             {/* </Navbar>  */}
           </Col>
         </Row>
         <Row noGutters>
           <Col xl={2}>
-            <Left className="bg-warning h-100 w-100"></Left>
+            <Left className=" h-100 w-100"></Left>
           </Col>
           <Col xl={8} >
             <Router>
@@ -69,7 +69,7 @@ function App() {
             </Router>           
           </Col>
           <Col xl={2}>
-            <Right className="bg-success h-100"></Right>
+            <Right className=" h-100"></Right>
           </Col>         
           
         </Row>

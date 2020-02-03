@@ -14,18 +14,19 @@ function ProductCard(props) {
     
     const path ='../product_images/public/media/products/'
     const product_image = path+props.filename+'-1.png'
-    console.log('image path',props.filename)
+    // console.log('image path',props.filename)
     return (
         <>
+        
         <div>
-            <Card bg='primary' text='white'>
+            <Card bg='secoundary' text='black'>
                 <Card.Img variant="top" src={logo} alt={props.name}/>
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>
                         Aliquam non ipsum enim. ${props.price}.
                     </Card.Text>
-                    <Link to="/ProductDetail" className="btn btn-success" variant="primary" style={{position: "absolute", top: '0px', right: '0'}}>Details</Link>
+                    <Link to="/ProductDetail" className="btn btn-primary" variant="primary" style={{position: "absolute", top: '0px', right: '0',}}>Details</Link>
                 </Card.Body>
             </Card>
 
