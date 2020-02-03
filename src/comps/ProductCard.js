@@ -20,13 +20,13 @@ function ProductCard(props) {
         
         <div>
             <Card bg='secoundary' text='black'>
-                <Card.Img variant="top" src={logo} alt={props.name}/>
+                <Card.Img variant="top" src={product_image} alt={props.name}/>
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>
                         Aliquam non ipsum enim. ${props.price}.
                     </Card.Text>
-                    <Link to="/ProductDetail" className="btn btn-primary" variant="primary" style={{position: "absolute", top: '0px', right: '0',}}>Details</Link>
+                    <Link to={"/product/"+props.id} className="btn btn-primary" variant="primary" style={{position: "absolute", top: '0px', right: '0',}}>Details</Link>
                 </Card.Body>
             </Card>
 

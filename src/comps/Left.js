@@ -5,7 +5,6 @@ import { Button, Nav, Card, Accordion  } from 'react-bootstrap';
 
 
 function Left(props) {
-    
     const array =  Object.values(PRODUCTS);
     //these arries will hold the products in the columns
     let a_super=[]
@@ -45,31 +44,10 @@ function Left(props) {
             }}
         >
             <Nav defaultActiveKey="/" className="flex-column">
-                {a_of_cata.map((item,index)=>{ return <Nav.Link href='/home'key={index}>{item[0]} ({item.length})</Nav.Link> })}
+                <Nav.Link href='/'>All ({catagories.length})</Nav.Link>
+                {a_of_cata.map((item,index)=>{ return <Nav.Link href={'/'+item[0]}key={index}>{item[0]} ({item.length})</Nav.Link> })}
             </Nav>
 
-            {/* <Accordion>
-                <Card>
-                    <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                            
-                            <p style={{fontSize: '2rem', }}><i className="fas fa-bars" style={{fontSize: '2rem', }}></i> Map</p>
-                        </Accordion.Toggle>
-                    </Card.Header>
-                    <Accordion.Collapse eventKey="0">
-                        <Card.Body>
-                            <Nav defaultActiveKey="/" className="flex-column">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/About">About Us</Nav.Link>
-                                <Nav.Link href="/Help">Help</Nav.Link>
-                                <Nav.Link eventKey="link-2">Order New Assay</Nav.Link>
-                                
-                            </Nav>
-
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
-            </Accordion> <br/> */}
             
         </div>
   );

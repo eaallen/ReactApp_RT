@@ -39,14 +39,15 @@ function Center(props) {
         <div
             className={props.className}
         >
-            <Nav defaultActiveKey="/">
-                <Nav.Item>
-                    <Nav.Link href="/" onClick={filter('all')}>All</Nav.Link>
-                </Nav.Item>
-                {unique_catagories.map(item =>{return <Nav.Item key={item+'parent'}> 
-                    <Nav.Link href="/" key={item}>{item}</Nav.Link> </Nav.Item>})}
-            </Nav>
-            <Container>                
+            <Container>
+                <Nav defaultActiveKey="/">
+                    <Nav.Item>
+                        <Nav.Link href="/" onClick={filter('all')}>All</Nav.Link>
+                    </Nav.Item>
+                    {unique_catagories.map(item =>{return <Nav.Item key={item+'parent'}> 
+                        <Nav.Link href="/" key={item}>{item}</Nav.Link> </Nav.Item>})}
+                </Nav>
+                            
                 {rows}
             </Container>   
             </div>

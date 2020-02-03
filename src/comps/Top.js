@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup } from 'react-bootstrap';
+import { Accordion, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup, Nav } from 'react-bootstrap';
 
 
 function Top(props) {
@@ -17,16 +17,26 @@ function Top(props) {
         >
          {console.log('user in', user)}   
         <Row>
-                <Col sm={10} style={{
+                <Col sm={5} style={{
                     fontSize: '3rem',
-                    color: 'white'
+                    color: 'white',
+                    paddingLeft: '1rem',
                     }}
                 >
-                    Rat Tunnels 
+                Rat Tunnels
+                   
                     
                 </Col>
-                <Col sm={2}> 
-                    <Navbar className="text-light">
+                <Col className='text-light' sm={4}>
+                   <Navbar className="text-light"> <Nav defaultActiveKey="/" className="text-light">
+                                <Nav.Link className='text-light' href="/">Home</Nav.Link>
+                                <Nav.Link className='text-light' href="/About">About Us</Nav.Link>
+                                <Nav.Link className='text-light' href="/Help">Help</Nav.Link>
+                                
+                            </Nav></Navbar> 
+                </Col>
+                <Col sm={3}> 
+                    <Navbar className="text-light text-right">
                         <div className="mb-2">
                             {['right'].map(direction => (
                             <>
@@ -39,9 +49,7 @@ function Top(props) {
                                     title= {<i className="fas fa-chess-king"
                                                 style={{
                                                     fontSize: '3rem',
-                                                    paddingLeft: 'auto',
-                                                    paddingRight: 'auto',
-                                                    textAlign: 'center'                                                    
+                                                    textAlign: 'right'                                                    
                                                 }}
                                             ></i>}
                                     

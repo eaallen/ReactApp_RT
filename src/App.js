@@ -18,10 +18,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useRouteMatch, 
 } from "react-router-dom";
 
 function App() {
+  
   return (
     <div className="App">
       
@@ -43,7 +45,8 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
                 <Switch>
-                <Route path="/ProductDetail">
+                  {/* {match ? <ProductDetail match={match} /> : <Help/>} */}
+                  <Route path="/product/:id" >
                     <ProductDetail />
                   </Route>
                   <Route path="/SignUp">
