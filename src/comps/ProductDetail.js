@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../product_images/public/media/products/apple-3.png';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../product_images/src/products'
-import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron } from 'react-bootstrap';
+import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron,Button } from 'react-bootstrap';
 
 
 function ProductDetail(props) {
@@ -22,14 +22,13 @@ function ProductDetail(props) {
                             {product.name}
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt dictum consequat. Morbi imperdiet varius enim 
-                            id elementum. Nam tellus erat, aliquet ut consequat ultrices, consequat at urna. Suspendisse ac nunc dictum, egestas leo 
-                            pharetra, maximus augue. Donec convallis viverra lorem eu facilisis. Proin a euismod quam, ut mattis felis.
+                            {product.description}
                         </p>
+                        <Button variant="warning">Buy ${product.price}</Button>
                     </Col>
                     
                     <Col className="text-right">
-                        <img src={logo} alt="image"/>
+                        <img src={logo} alt={product.filename}/>
                     </Col>
                 </Row> 
             </Container>   

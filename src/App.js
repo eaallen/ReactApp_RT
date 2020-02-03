@@ -9,6 +9,7 @@ import Top from './comps/Top';
 import Account from './comps/Account';
 import Login from './comps/Login';
 import SignUp from './comps/SignUp';
+import Filter from './comps/Filter';
 import ProductDetail from './comps/ProductDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
@@ -46,6 +47,9 @@ function App() {
                     renders the first one that matches the current URL. */}
                 <Switch>
                   {/* {match ? <ProductDetail match={match} /> : <Help/>} */}
+                  <Route path="/filter/:cata" >
+                    <Filter />
+                  </Route>
                   <Route path="/product/:id" >
                     <ProductDetail />
                   </Route>

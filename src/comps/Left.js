@@ -28,10 +28,10 @@ function Left(props) {
 
     }
     for(let item of a_of_cata){
-        console.log(item[0],item.length)
+        // console.log(item[0],item.length)
     }
     
-    console.log('left',a_of_cata)
+    // console.log('left',a_of_cata)
     
 
 
@@ -45,7 +45,7 @@ function Left(props) {
         >
             <Nav defaultActiveKey="/" className="flex-column">
                 <Nav.Link href='/'>All ({catagories.length})</Nav.Link>
-                {a_of_cata.map((item,index)=>{ return <Nav.Link href={'/'+item[0]}key={index}>{item[0]} ({item.length})</Nav.Link> })}
+                {a_of_cata.map((item,index)=>{ return <Nav.Link href={'/filter/'+item[0]}key={index}>{item[0]} ({item.length})</Nav.Link> })}
             </Nav>
 
             
