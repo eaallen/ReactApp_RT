@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../product_images/public/media/products/water_bottle-1.png';
 import { Container, Row, Col,Navbar,DropdownButton,Dropdown,Button,Jumbotron, Card,  } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
@@ -12,15 +11,13 @@ import {
 
 function ProductCard(props) {
     
-    const path ='../product_images/public/media/products/'
-    const product_image = path+props.filename+'-1.png'
-    // console.log('image path',props.filename)
+   
     return (
         <>
         
         <div>
             <Card bg='secoundary' text='black'>
-                <Card.Img variant="top" src={product_image} alt={props.name}/>
+                <Card.Img variant="top" src={`./product_images/${props.filename}-1.png`} alt={props.name}/>
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>

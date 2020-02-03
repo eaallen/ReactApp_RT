@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from '../product_images/public/media/products/apple-3.png';
 import { useRouteMatch} from "react-router-dom";
-import PRODUCTS from '../product_images/src/products'
+import PRODUCTS from '../products'
 import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron,Button } from 'react-bootstrap';
 
 
@@ -28,7 +27,7 @@ function ProductDetail(props) {
                     </Col>
                     
                     <Col className="text-right">
-                        <img src={logo} alt={product.filename}/>
+                        {/* <img src={} alt={product.filename}/> */}
                     </Col>
                 </Row> 
             </Container>   
