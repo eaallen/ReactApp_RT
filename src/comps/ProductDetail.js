@@ -27,7 +27,7 @@ function ProductDetail(props) {
                     </Col>
                     
                     <Col className="text-right">
-                        {/* <img src={} alt={product.filename}/> */}
+                        <img src={`../product_images/${product.filename}-1.png`} alt={product.filename}/>
                     </Col>
                 </Row> 
             </Container>   

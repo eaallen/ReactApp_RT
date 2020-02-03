@@ -15,14 +15,14 @@ function Center(props) {
    const array =  Object.values(PRODUCTS);
    //these arries will hold the products in the columns
    let a_super=[]
-   let rows = []
+   let a_rows = []
    for (let icount = 0; icount < array.length;icount = icount+4){
         let a_baby = array.slice(icount,icount+4)
         a_super.push(a_baby)
     }
     // console.log(a_super)
     for (let item of a_super){
-       rows.push(<Row>{item.map((col, index)=>{return <Col key={index}>
+       a_rows.push(<Row>{item.map((col, index)=>{return <Col key={index}>
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }
@@ -42,7 +42,7 @@ function Center(props) {
         >
             <Container>
                 <MyNav category={unique_catagories}></MyNav>
-                {rows}
+                {a_rows}
             </Container>   
             </div>
   );

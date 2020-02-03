@@ -43,10 +43,9 @@ function App() {
           <Col xl={8} >
             <Router>
                <div>
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
+                
                 <Switch>
-                  {/* {match ? <ProductDetail match={match} /> : <Help/>} */}
+                  
                   <Route path="/filter/:cata" >
                     <Filter />
                   </Route>

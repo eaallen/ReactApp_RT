@@ -17,7 +17,8 @@ function ProductCard(props) {
         
         <div>
             <Card bg='secoundary' text='black'>
-                <Card.Img variant="top" src={`./product_images/${props.filename}-1.png`} alt={props.name}/>
+                <Card.Img variant="top" src={`../product_images/${props.filename}-1.png`} alt={props.name}/>
+                {console.log(props.filename)}
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>
