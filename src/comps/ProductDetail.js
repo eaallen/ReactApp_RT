@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron,Button } from 'react-bootstrap';
@@ -9,6 +9,12 @@ function ProductDetail(props) {
     let prod_id = match.params.id
     const array =  Object.values(PRODUCTS);
     let product = array.find(x=> x.id===prod_id)
+    let arr = [1,2,3,4];
+    let [_img, set_img] = useState(1) 
+
+    const handle_change = e =>{        
+        set_img(e.target.id)        
+    }
 
 
     return (
@@ -16,7 +22,7 @@ function ProductDetail(props) {
             
             <Container>
                 <Row>
-                    <Col>
+                    <Col md="5">
                         <h2>
                             {product.name}
                         </h2>
@@ -26,8 +32,15 @@ function ProductDetail(props) {
                         <Button variant="warning">Buy ${product.price}</Button>
                     </Col>
                     
-                    <Col className="text-right">
-                        <img src={`../product_images/${product.filename}-1.png`} alt={product.filename}/>
+                    <Col className="text-right" md='5'>
+                        <img src={`../product_images/${product.filename}-${_img}.png`} alt={product.filename}/>
+                        
+                       
+                    </Col>
+                    <Col md='2'>
+                                {arr.map(item => {return <Row key={item + 10}>
+                                    <img src={`../product_images/${product.filename}-${item}.png`} style={{width: '50px'}} id={item} key={item+3} onMouseEnter={handle_change}/>
+                                </Row>})}
                     </Col>
                 </Row> 
             </Container>   

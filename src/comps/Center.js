@@ -9,10 +9,10 @@ import MyNav from './MyNav'
 
 function Center(props) {
     let match = useRouteMatch("/:cata");
-    console.log('match', match)
+    // console.log('match', match)
     // let prod_id = match.params.id
     
-   const array =  Object.values(PRODUCTS);
+    const array =  Object.values(PRODUCTS);
    //these arries will hold the products in the columns
    let a_super=[]
    let a_rows = []
@@ -26,14 +26,11 @@ function Center(props) {
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }
-    
-    
-    //geting list of catagories
-    let catagories = array.map(item => item.category)
-    //making it a unique list
-    let unique_catagories = catagories.filter((value, index, _self)=> _self.indexOf(value)===index);
-    console.log('catagories',unique_catagories)
-    
+
+    // for(let item of unique_catagories){
+    //     category_count[item.category]
+    //     console.log(category_count)
+    // }
     
     // console.log(array)
     return (
@@ -41,7 +38,7 @@ function Center(props) {
             className={props.className}
         >
             <Container>
-                <MyNav category={unique_catagories}></MyNav>
+                <MyNav></MyNav>
                 {a_rows}
             </Container>   
             </div>
