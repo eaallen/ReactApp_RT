@@ -69,7 +69,7 @@ function App() {
                     <Help />
                   </Route>
                   <Route exact path="/">
-                    <Center />
+                    <Center style={{padding: '2rem'}} />
                   </Route>
                   <Route>
                     <Msg404 />
@@ -85,7 +85,7 @@ function App() {
         </Row>
         <Row>
           <Col xl={12}>
-            <Bottom className="text-light bg-danger bottom-div" style={{position: 'absolute'}}></Bottom>
+            <Bottom className="text-light bg-danger "></Bottom>
           </Col>
         </Row>      
       

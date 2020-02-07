@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { Container, Row, Col,Nav,DropdownButton,Dropdown,ButtonGroup,Jumbotron } from 'react-bootstrap';
+import { Container, Row, Col,Nav,DropdownButton,Dropdown,ButtonGroup,Jumbotron, CardGroup } from 'react-bootstrap';
 import { isTemplateSpan } from 'typescript';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
@@ -30,9 +30,9 @@ function Filter(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       rows.push(<Row>{item.map((col, index)=>{return <Col key={index} md={3}>
+       rows.push(<Row><CardGroup>{item.map((col, index)=>{return <Col key={index} md={3}>
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
-                    price={col.price}/></Col>})}</Row>) 
+                    price={col.price}/></Col>})}</CardGroup></Row>) 
     }
     
     //geting list of catagories

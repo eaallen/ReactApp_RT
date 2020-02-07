@@ -23,29 +23,31 @@ function ProductDetail(props) {
 
 
     return (
-        <div>
+        <div style={{padding: '2rem'}}>
             
             <Container>
                 <Row>
-                    <Col md="5">
-                        <h2>
-                            {product.name}
-                        </h2>
-                        <p>
+                    <Col md={10}>
+                    
+                        
+                        <p> <div className="float-right text-center">
+                                <img src={`../product_images/${product.filename}-${_img}.png`} alt={product.filename}  style={{marginLeft: '15px'}}/>
+                                <br/>
+                                {arr.map(item => {return <img src={`../product_images/${product.filename}-${item}.png`} style={{width: '50px'}} id={item} key={item+3} onMouseEnter={handle_change}/>
+                                })}
+                            </div>
+                            <br></br>
+                            <h3>
+                                {product.name}
+                            </h3>
                             {product.description}
                         </p>
                         <Button variant="warning">Buy ${product.price}</Button>
-                    </Col>
                     
-                    <Col className="text-right" md='5'>
-                        <img src={`../product_images/${product.filename}-${_img}.png`} alt={product.filename}/>
+                    
+                    
                         
                        
-                    </Col>
-                    <Col md='2'>
-                                {arr.map(item => {return <Row key={item + 10}>
-                                    <img src={`../product_images/${product.filename}-${item}.png`} style={{width: '50px'}} id={item} key={item+3} onMouseEnter={handle_change}/>
-                                </Row>})}
                     </Col>
                 </Row> 
             </Container>   
