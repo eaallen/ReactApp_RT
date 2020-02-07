@@ -22,7 +22,7 @@ function Center(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       a_rows.push(<Row>{item.map((col, index)=>{return <Col key={index}>
+       a_rows.push(<Row>{item.map((col, index)=>{return <Col key={index} md={3}>
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }

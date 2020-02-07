@@ -2,15 +2,20 @@ import React, { useState } from 'react';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron,Button } from 'react-bootstrap';
+import Msg404 from './Msg404';
 
 
 function ProductDetail(props) {
+    let [_img, set_img] = useState(1) 
     let match = useRouteMatch("/product/:id");
     let prod_id = match.params.id
+    console.log('guuuuuurrr',prod_id)
     const array =  Object.values(PRODUCTS);
     let product = array.find(x=> x.id===prod_id)
+    if(!product){
+        return <Msg404 msg={prod_id}></Msg404>
+    }
     let arr = [1,2,3,4];
-    let [_img, set_img] = useState(1) 
 
     const handle_change = e =>{        
         set_img(e.target.id)        

@@ -5,15 +5,21 @@ import { isTemplateSpan } from 'typescript';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import MyNav from './MyNav'
+import Msg404 from './Msg404'
 
 function Filter(props) {
     
     let match = useRouteMatch("/filter/:cata");
     // console.log('match', match)
     let category_id = match.params.cata
-   const array =  Object.values(PRODUCTS);
-    console.log(array[0], category_id)
+    const array =  Object.values(PRODUCTS);
+    
    const a_filtered = array.filter(obj =>  obj.category === category_id)
+   
+   if(a_filtered.length===0){
+    return <Msg404 msg={category_id}></Msg404>
+   }
+
    console.log('filtered arry', a_filtered)
    //these arries will hold the products in the columns
    let a_super=[]
@@ -24,7 +30,7 @@ function Filter(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       rows.push(<Row>{item.map((col, index)=>{return <Col key={index}>
+       rows.push(<Row>{item.map((col, index)=>{return <Col key={index} md={3}>
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }

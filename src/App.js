@@ -22,6 +22,7 @@ import {
   Link,
   useRouteMatch, 
 } from "react-router-dom";
+import Msg404 from './comps/Msg404';
 
 function App() {
   
@@ -67,8 +68,11 @@ function App() {
                   <Route path="/Help">
                     <Help />
                   </Route>
-                  <Route path="/">
+                  <Route exact path="/">
                     <Center />
+                  </Route>
+                  <Route>
+                    <Msg404 />
                   </Route>
                 </Switch>
               </div>
@@ -81,7 +85,7 @@ function App() {
         </Row>
         <Row>
           <Col xl={12}>
-            <Bottom className="text-light bg-danger"></Bottom>
+            <Bottom className="text-light bg-danger bottom-div" style={{position: 'absolute'}}></Bottom>
           </Col>
         </Row>      
       
