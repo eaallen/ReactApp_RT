@@ -1,6 +1,6 @@
 import React from 'react';
 import PRODUCTS from '../products'
-import { Button, Nav, Card, Accordion  } from 'react-bootstrap';
+import { Nav,} from 'react-bootstrap';
 
 
 

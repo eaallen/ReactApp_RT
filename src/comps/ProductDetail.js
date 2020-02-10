@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
-import { Container, Row, Col,Navbar,DropdownButton,Dropdown,ButtonGroup,Jumbotron,Button } from 'react-bootstrap';
+import { Container, Row, Col,Button } from 'react-bootstrap';
 import Msg404 from './Msg404';
 
 
@@ -30,7 +30,7 @@ function ProductDetail(props) {
                     <Col md={10}>
                     
                         
-                        <p> <div className="float-right text-center">
+                        <div> <div className="float-right text-center">
                                 <img src={`../product_images/${product.filename}-${_img}.png`} alt={product.filename}  style={{marginLeft: '15px'}}/>
                                 <br/>
                                 {arr.map(item => {return <img src={`../product_images/${product.filename}-${item}.png`} style={{width: '50px'}} id={item} key={item+3} onMouseEnter={handle_change}/>
@@ -41,7 +41,7 @@ function ProductDetail(props) {
                                 {product.name}
                             </h3>
                             {product.description}
-                        </p>
+                        </div>
                         <Button variant="warning">Buy ${product.price}</Button>
                     
                     

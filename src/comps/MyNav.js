@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col,Nav,DropdownButton,Dropdown,ButtonGroup,Jumbotron } from 'react-bootstrap';
+import { Nav,} from 'react-bootstrap';
 import PRODUCTS from '../products'
 
 //import Footer from 'react-bootstrap/';

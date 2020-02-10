@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { Container, Row, Col,Nav,DropdownButton,Dropdown,ButtonGroup,Jumbotron } from 'react-bootstrap';
-import { isTemplateSpan } from 'typescript';
+import { Container, Row, Col,} from 'react-bootstrap';
+// import { isTemplateSpan } from 'typescript';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import MyNav from './MyNav'

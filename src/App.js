@@ -14,7 +14,7 @@ import ProductDetail from './comps/ProductDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 import './index.scss'
-import { Container, Row, Col,Navbar } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
