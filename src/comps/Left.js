@@ -27,14 +27,6 @@ function Left(props) {
         a_of_cata.push(a_items)
 
     }
-    for(let item of a_of_cata){
-        // console.log(item[0],item.length)
-    }
-    
-    // console.log('left',a_of_cata)
-    
-
-
 
     return (
         <div

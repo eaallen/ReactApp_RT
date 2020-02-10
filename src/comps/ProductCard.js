@@ -1,9 +1,6 @@
 import React from 'react';
-import { Container, Row, Col,Navbar,DropdownButton,Dropdown,Button,Jumbotron, Card,  } from 'react-bootstrap';
+import { Card,  } from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
   

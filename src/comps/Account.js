@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, Col,Navbar,
-         DropdownButton,Dropdown,ButtonGroup,Jumbotron, Card, Button } from 'react-bootstrap';
+import { Row, Col,Jumbotron,Button } from 'react-bootstrap';
 
 
 function Account(props) {

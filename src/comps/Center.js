@@ -2,16 +2,12 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import { Container, Row, Col,} from 'react-bootstrap';
 // import { isTemplateSpan } from 'typescript';
-import { useRouteMatch} from "react-router-dom";
+// import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import MyNav from './MyNav'
 
 
 function Center(props) {
-    let match = useRouteMatch("/:cata");
-    // console.log('match', match)
-    // let prod_id = match.params.id
-    
     const array =  Object.values(PRODUCTS);
    //these arries will hold the products in the columns
    let a_super=[]
@@ -26,13 +22,6 @@ function Center(props) {
                     <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }
-
-    // for(let item of unique_catagories){
-    //     category_count[item.category]
-    //     console.log(category_count)
-    // }
-    
-    // console.log(array)
     return (
         <div
             className={props.className}
