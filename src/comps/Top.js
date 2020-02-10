@@ -15,8 +15,7 @@ function Top(props) {
         <div
             className={props.className}
         >
-         {console.log('user in', user)}   
-        <Row>
+            <Row>
                 <Col sm={5} style={{
                     fontSize: '3rem',
                     color: 'white',
@@ -28,12 +27,13 @@ function Top(props) {
                     
                 </Col>
                 <Col className='text-light' sm={4}>
-                   <Navbar className="text-light"> <Nav defaultActiveKey="/" className="text-light">
-                                <Nav.Link className='text-light' href="/">Home</Nav.Link>
-                                <Nav.Link className='text-light' href="/About">About Us</Nav.Link>
-                                <Nav.Link className='text-light' href="/Help">Help</Nav.Link>
-                                
-                            </Nav></Navbar> 
+                   <Navbar className="text-light"> 
+                       <Nav defaultActiveKey="/" className="text-light">
+                            <Nav.Link key='10' className='text-light' href="/">Home</Nav.Link>
+                            <Nav.Link key='20' className='text-light' href="/About">About Us</Nav.Link>
+                            <Nav.Link key='30' className='text-light' href="/Help">Help</Nav.Link>                                
+                        </Nav>
+                    </Navbar> 
                 </Col>
                 <Col sm={3}> 
                     <Navbar className="text-light text-right">
@@ -57,7 +57,7 @@ function Top(props) {
                                 <Dropdown.Item key="1" className='text-primary'>Elijah Allen</Dropdown.Item>
                                 <Dropdown.Item key="2" href="/Help">Assay Stats</Dropdown.Item>
                                 <Dropdown.Item key="3" href="/Account">Account</Dropdown.Item>
-                                <Dropdown.Divider />
+                                <Dropdown.Divider key='divider' />
                                 <Dropdown.Item key="4" className='text-danger' href='/Login' onClick={log_out}>Sign Out</Dropdown.Item>
                                 </DropdownButton>{''}
                             </>

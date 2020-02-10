@@ -12,18 +12,17 @@ function MyNav(props) {
     for(let prod of array){        
         category_count[prod.category] = (category_count[prod.category]||0) +1        
     }
-    console.log('--->',category_count)
 
     return (
         <div
             className={props.className}
         >           
-        <Nav variant="pills" defaultActiveKey="/">
+        <Nav defaultActiveKey="/">
                     <Nav.Item>
                         <Nav.Link href={"/"}>All</Nav.Link>
                     </Nav.Item>
-                    {Object.entries(category_count).map(item =>{return <Nav.Item key={item+'parent'}> 
-                        <Nav.Link href={'/filter/'+item[0]} key={item}>{item[0]} ({item[1]})</Nav.Link> </Nav.Item>})}
+                    {Object.entries(category_count).map(item =>{return( <Nav.Item key={item[0]+'parent'}> 
+                        <Nav.Link href={'/filter/'+item[0]} key={item}>{item[0]} ({item[1]})</Nav.Link> </Nav.Item>)})}
                 </Nav>
 
         </div>

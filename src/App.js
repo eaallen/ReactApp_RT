@@ -45,7 +45,7 @@ function App() {
                 
                 <Switch>
                   
-                  <Route path="/filter/:cata" >
+                  <Route path="/filter/:cata" key='filter' >
                     <Filter />
                   </Route>
                   <Route path="/product/:id" >
@@ -66,7 +66,7 @@ function App() {
                   <Route path="/Help">
                     <Help />
                   </Route>
-                  <Route exact path="/">
+                  <Route exact path="/" key='error'>
                     <Center style={{padding: '2rem'}} />
                   </Route>
                   <Route>

@@ -8,7 +8,7 @@ function Help(props){
             
             <Jumbotron className="text-center">
                 <h1>Help</h1>
-                <i class="fas fa-hands-helping" style={{
+                <i className="fas fa-hands-helping" style={{
                     fontSize: '30rem',
                 }}></i>
             </Jumbotron>

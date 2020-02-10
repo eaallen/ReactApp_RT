@@ -31,7 +31,7 @@ function ProductDetail(props) {
                     
                         
                         <div> <div className="float-right text-center">
-                                <img src={`../product_images/${product.filename}-${_img}.png`} alt={product.filename}  style={{marginLeft: '15px'}} alt="uh-oh"/>
+                                <img src={`../product_images/${product.filename}-${_img}.png`} style={{marginLeft: '15px'}} alt="uh-oh"/>
                                 <br/>
                                 {arr.map(item => {return <img src={`../product_images/${product.filename}-${item}.png`} style={{width: '50px'}} id={item} key={item+3} onMouseEnter={handle_change} alt="uh-oh"/>
                                 })}

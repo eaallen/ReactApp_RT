@@ -20,7 +20,6 @@ function Filter(props) {
     return <Msg404 msg={category_id}></Msg404>
    }
 
-   console.log('filtered arry', a_filtered)
    //these arries will hold the products in the columns
    let a_super=[]
    let rows = []
@@ -30,19 +29,15 @@ function Filter(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       rows.push(<Row><CardGroup>{item.map((col, index)=>{return <Col key={index} md={3}>
-                    <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
-                    price={col.price}/></Col>})}</CardGroup></Row>) 
+       rows.push(<Row>{item.map((col)=>{return <Col key={col.id} md={3}>
+                    <ProductCard id={col.id} filename={col.filename} name={col.name} category={col.category}
+                    price={col.price}/></Col>})}</Row>) 
     }
     
     //geting list of catagories
     let catagories = array.map(item => item.category)
     //making it a unique list
     let unique_catagories = catagories.filter((value, index, _self)=> _self.indexOf(value)===index);
-    console.log('catagories',unique_catagories)
-    
-    
-    // console.log(array)
     return (
         <div
             className={props.className}

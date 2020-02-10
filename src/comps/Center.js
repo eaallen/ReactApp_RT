@@ -5,6 +5,7 @@ import { Container, Row, Col,} from 'react-bootstrap';
 // import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
 import MyNav from './MyNav'
+import uuid from 'node-uuid'
 
 
 function Center(props) {
@@ -18,8 +19,8 @@ function Center(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       a_rows.push(<Row>{item.map((col, index)=>{return <Col key={index} md={3}>
-                    <ProductCard key={col.id+1} id={col.id} filename={col.filename} name={col.name} category={col.category}
+       a_rows.push(<Row>{item.map((col)=>{return <Col key={uuid()}  md={3}>
+                    <ProductCard key={uuid()} id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }
     return (
