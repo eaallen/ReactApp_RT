@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { Container, Row, Col,CardGroup } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 // import { isTemplateSpan } from 'typescript';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
@@ -29,7 +29,7 @@ function Filter(props) {
     }
     // console.log(a_super)
     for (let item of a_super){
-       rows.push(<Row>{item.map((col)=>{return <Col key={col.id} md={3}>
+       rows.push(<Row key={item[0].id+'y'}>{item.map((col)=>{return <Col key={col.id} md={3}>
                     <ProductCard id={col.id} filename={col.filename} name={col.name} category={col.category}
                     price={col.price}/></Col>})}</Row>) 
     }

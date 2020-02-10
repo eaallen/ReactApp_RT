@@ -8,6 +8,9 @@ function About(props){
 
             <Jumbotron className='text-center'>
                 <h1>About Us</h1>
+                <p>
+                    this site is currently just for testing 
+                </p>
             </Jumbotron>
 
             <Row  className='center-row'>

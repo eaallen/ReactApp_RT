@@ -9,7 +9,7 @@ function Top(props) {
     const log_out = e =>{
         // e.preventDefault()
         setUser(false)
-        console.log('user in', setUser)
+        console.log('user in', user)
     }
     return (
         <div
@@ -29,9 +29,9 @@ function Top(props) {
                 <Col className='text-light' sm={4}>
                    <Navbar className="text-light"> 
                        <Nav defaultActiveKey="/" className="text-light">
-                            <Nav.Link key='10' className='text-light' href="/">Home</Nav.Link>
-                            <Nav.Link key='20' className='text-light' href="/About">About Us</Nav.Link>
-                            <Nav.Link key='30' className='text-light' href="/Help">Help</Nav.Link>                                
+                            <Nav.Link className='text-light' href="/">Home</Nav.Link>
+                            <Nav.Link className='text-light' href="/About">About Us</Nav.Link>
+                            <Nav.Link className='text-light' href="/Help">Help</Nav.Link>                                
                         </Nav>
                     </Navbar> 
                 </Col>
@@ -39,14 +39,14 @@ function Top(props) {
                     <Navbar className="text-light text-right">
                         <div className="mb-2">
                             {['right'].map(direction => (
-                            <>
+                            <div key='xx6'>
                                 <DropdownButton
                                     as={ButtonGroup}
-                                    key='right'
+                                    
                                     id={`dropdown-button-drop-${direction}`}
                                     drop='right'
                                     variant="primary"
-                                    title= {<i className="fas fa-chess-king"
+                                    title= {<i  className="fas fa-chess-king"
                                                 style={{
                                                     fontSize: '3rem',
                                                     textAlign: 'right'                                                    
@@ -54,13 +54,13 @@ function Top(props) {
                                             ></i>}
                                     
                                 >
-                                <Dropdown.Item key="1" className='text-primary'>Elijah Allen</Dropdown.Item>
-                                <Dropdown.Item key="2" href="/Help">Assay Stats</Dropdown.Item>
-                                <Dropdown.Item key="3" href="/Account">Account</Dropdown.Item>
-                                <Dropdown.Divider key='divider' />
-                                <Dropdown.Item key="4" className='text-danger' href='/Login' onClick={log_out}>Sign Out</Dropdown.Item>
+                                <Dropdown.Item className='text-primary'>Elijah Allen</Dropdown.Item>
+                                <Dropdown.Item href="/Help">Assay Stats</Dropdown.Item>
+                                <Dropdown.Item href="/Account">Account</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item className='text-danger' href='/Login' onClick={log_out}>Sign Out</Dropdown.Item>
                                 </DropdownButton>{''}
-                            </>
+                            </div>
                             ))}
                         </div>
                     </Navbar>
