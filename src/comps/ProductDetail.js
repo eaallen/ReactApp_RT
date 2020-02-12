@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useRouteMatch} from "react-router-dom";
 import PRODUCTS from '../products'
-import { Container, Row, Col,Button } from 'react-bootstrap';
+import { Container, Row, Col, } from 'react-bootstrap';
 import Msg404 from './Msg404';
-
+import PurchaseForm from './PurchaseForm'
 
 function ProductDetail(props) {
     let [_img, set_img] = useState(1) 
@@ -41,10 +41,13 @@ function ProductDetail(props) {
                                 {product.name}
                             </h3>
                             {product.description}
+                            
                         </div>
-                        <Button variant="warning">Buy ${product.price}</Button>
-                    
-                    
+                        <br/>
+                        <div>
+                        <PurchaseForm product = {product}></PurchaseForm>
+                        </div>
+                        
                     
                         
                        
