@@ -9,7 +9,6 @@ class PurchaseForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date(),
             name_on_card: '',
             card_number:  '',
             mm:           '',
@@ -20,6 +19,7 @@ class PurchaseForm extends React.Component {
     handleChange =(e) => {
         e.preventDefault()
         // let name =e.target.getAttribute('name')
+        
         let new_state={[e.target.getAttribute('name')]: e.target.value}
         this.setState(new_state)
         
